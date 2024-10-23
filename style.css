@@ -1,0 +1,318 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header/Menu Styles */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.menu {
+    list-style: none;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #f39c12;
+}
+
+/* Home Section */
+.home-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.home-section h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+.about-animation img {
+    width: 150px;
+    margin-top: 20px;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Prices Section */
+ /* Prices Section */
+.prices-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.coffee-types {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.coffee-item {
+    background-color: #f39c12;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    max-width: 250px; /* Limited width for better alignment */
+}
+
+.coffee-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.coffee-item:hover img {
+    transform: scale(1.1);  /* Zoom-in effect on hover */
+}
+
+.coffee-item h3, .coffee-item p, .coffee-item span {
+    color: white;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);  /* Start with text moved down */
+    transition: all 0.3s ease-in-out;
+}
+
+.coffee-item:hover h3, 
+.coffee-item:hover p, 
+.coffee-item:hover span {
+    opacity: 1;
+    transform: translateY(0);  /* Slide text back into view */
+}
+
+.coffee-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /* Add shadow when hovered */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+    .coffee-item {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+
+/* Flavours Section */
+    /* Flavour Section */
+.flavours-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.flavour-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flavour-card {
+    background-color: #e74c3c;
+    color: white;
+    margin: 15px;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.flavour-card:hover {
+    transform: rotateY(180deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.flavour-card .front,
+.flavour-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Ensure only one side is visible */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+/* Front card style */
+.flavour-card .front {
+    background-color: #e74c3c; /* Red for front */
+}
+
+/* Back card style */
+.flavour-card .back {
+    background-color: #d19a6a; /* Sweet coffee color */
+    transform: rotateY(180deg); /* Ensure the back is hidden initially */
+    color: white; /* Keep text color white for visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Center text vertically */
+    padding: 15px; /* Add padding for spacing */
+}
+
+/* Flavour Image Styles */
+.flavour-image {
+    width: 80%; /* Adjusts the image width */
+    margin: 0 auto 10px; /* Center the image and add some margin below */
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+}
+
+.flavour-card:hover .flavour-image {
+    transform: scale(1.1); /* Slightly zoom the image on hover */
+}
+
+/* Heading Style on the Back Side */
+.flavour-card .back h3 {
+    margin-bottom: 10px; /* Space between heading and description */
+    font-size: 20px; /* Slightly larger font for emphasis */
+}
+
+/* Text visibility */
+.flavour-card h3, 
+.flavour-card p {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+ /* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.order-form {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;  /* Adjusted form size */
+    padding: 20px;
+    background-color: #fff; /* Added form background color */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;  /* Fade-in animation */
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.order-form input, .order-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.order-form input:hover, .order-form select:hover,
+.order-form input:focus, .order-form select:focus {
+    border-color: #3498db;  /* Change border color on hover/focus */
+}
+
+/* Hover effect for button */
+.order-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);  /* Button grows slightly on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+    .order-form {
+        width: 90%;  /* Take up more width on smaller screens */
+    }
+}
+
+
+/* Footer */
+footer {
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
