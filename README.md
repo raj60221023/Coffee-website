@@ -1,4 +1,4 @@
-#Coffee Shop Website
+Coffee Shop Website
 Welcome to the Coffee Shop website! This project showcases a delightful selection of coffees, their prices, and flavors, along with an interactive ordering form. It's a simple yet elegant single-page application designed to provide users with an engaging experience while exploring various coffee options.
 
  
